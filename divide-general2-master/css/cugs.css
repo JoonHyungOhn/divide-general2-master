@@ -1,4 +1,6 @@
 body {
+
+    height: 1000px;
     opacity: 1;
     background: #632c65;
     background: -moz-linear-gradient(-45deg, #632c65 15%, #56a5e2 100%);
@@ -6,7 +8,7 @@ body {
     background: linear-gradient(135deg, #632c65 15%,#56a5e2 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#632c65', endColorstr='#56a5e2',GradientType=1 );
 
-    background-image: linear-gradient(90deg, #131230, #744F5E);
+    
     background-size: cover;
 }
 .main{
