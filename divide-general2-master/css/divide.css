@@ -1,121 +1,162 @@
-
 body {
-    background-image: linear-gradient(90deg, #131230, #744F5E);
-    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
-.general {
-    text-align: center;
-    width: 600px;
-    height: 900px;
-    float : left;
-	margin-top: 50px;
-    margin-left : 250px;
-	background-color: #d9d9d9;
-    border-radius: 30%;
-    opacity: 0.5;
-}
-.general > .general-txt {
-    padding-top: 50px;
-    color : black;
-    font-size : 70px;
-    font-style: bold;
-    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
-
-}
-.general > .general-img {
-    margin-top : 20px; 
-    width: 170px;
-    height: 250px;
+h1 {
+    margin-top: 40px;
+    font-size: 60px;
+    font-weight: bold;
 }
 
-.general > .btn_general {
-    margin-top: 30px;
-    margin-left: 200px;
-    width: 150px;
-    height: 60px;
-}
 
-.general > .btn_general > button {
-    border-radius: 40%;
-    width: 200px;
-    height: 100px;
-    background-color: #eee;
-    cursor: pointer;
-    outline: none;
-    box-shadow: 1px 4px 0 rgb(0,0,0,0.5);
-
-    font-family:'Courier New', Courier, monospace;
-    font-weight: 300px;
-    font-size: 40px;
-    color: black;
+.divide {
+    width: 80vw;
+    min-height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    z-index: 2;
 }
   
-.general > .btn_general > button:active {
-    box-shadow: 1px 1px 0 rgb(0,0,0,0.5);
+.divide .box {
     position: relative;
-    top:2px;
+    width: 25vw;
+    height: 50vh;
+    min-height: 320px;
+    background: #f2f2f2;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 30px;
+    box-shadow: -10px 25px 50px rgba(0, 0, 0, 0.3);
 }
   
-.general > .btn_general > button:hover {
-    background-color: #ffa9a9;
+.divide .box::before {
+    content: '\201C';
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 100%;
+    height: 100%;
+    font-size: 120px;
+    opacity: 0.2;
+    background: transparent;
+    pointer-events: none;
+}
+  
+.divide .box::after {
+    content: '\201D';
+    position: absolute;
+    bottom: -10%;
+    right: 5%;
+    font-size: 120px;
+    opacity: 0.2;
+    background: transparent;
+    filter: invert(1);
+    pointer-events: none;
 }
 
-
-
-
-
-.conven {
-    text-align: center;
-    width: 600px;
-    height: 900px;
-    float: right;
-    margin-top: 50px;
-    margin-right: 250px;
-	background-color: #d9d9d9;
-    border-radius: 30%;
-    opacity: 0.5;
-    font-style: bold;
+/*버튼 실험*/
+.divide .btn_general {
+    background-color: #FFF;
+    color: #333;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.conven > .convenience-txt {
-    padding-top: 50px;
-    color : black;
-    font-size : 70px;
-    font-style: bold;
-    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
-
-}
-.conven > .convenience-img {
-    width: 170px;
-    height: 250px;
-}
-.conven > .btn_convenience {
-    margin-top: 30px;
-    margin-left: 200px;
-    width: 150px;
-    height: 60px;
-}
-.conven > .btn_convenience > button {
-    border-radius: 40%;
-    width: 200px;
-    height: 100px;
-    background-color: #eee;
+.divide .btn_general:hover {
+    background-color: #333;
+    color: #FFF;
     cursor: pointer;
-    outline: none;
-    box-shadow: 1px 4px 0 rgb(0,0,0,0.5);
+}
 
-    font-family:'Courier New', Courier, monospace;
-    font-weight: 300px;
-    font-size: 40px;
-    color: black;
+.divide .btn_convenience {
+    background-color: #FFF;
+    color: #fcb900;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.divide .btn_convenience:hover {
+    background-color: #fcb900;
+    color: #FFF;
+    cursor: pointer;
+}
+/*요기까지 start 버튼*/
+
+
+.divide .box p {
+    margin: 0;
+    padding: 10px;
+    font-size: 1.2rem;
 }
   
-.conven > .btn_convenience > button:active {
-    box-shadow: 1px 1px 0 rgb(0,0,0,0.5);
-    position: relative;
-    top:2px;
+.divide .box h2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: 10%;
+    right: 10%;
+    font-size: 1.5rem;
 }
   
-.conven > .btn_convenience > button:hover {
-    background-color: #ffa9a9;
+.divide .box:hover {
+    color: #f2f2f2;
+    box-shadow: 20px 50px 100px rgba(0, 0, 0, 0.5);
+}
+  
+.divide .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    pointer-events: none;
+    width: 100%;
+    height: 200%;
+    overflow: hidden;
+}
+  
+.divide .box.box1:hover, .divide .box.box1:hover~.bg {
+    opacity: 1;
+    background: #e2a9e5;
+    background: -moz-linear-gradient(-45deg, #e2a9e5 15%, #2b94e5 100%);
+    background: -webkit-linear-gradient(-45deg, #e2a9e5 15%,#2b94e5 100%);
+    background: linear-gradient(135deg, #e2a9e5 15%,#2b94e5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2a9e5', endColorstr='#2b94e5',GradientType=1 );
+}
+  
+.divide .box.box2:hover, .divide .box.box2:hover~.bg {
+    opacity: 1;
+    background: #632c65;
+    background: -moz-linear-gradient(-45deg, #632c65 15%, #56a5e2 100%);
+    background: -webkit-linear-gradient(-45deg, #632c65 15%,#56a5e2 100%);
+    background: linear-gradient(135deg, #632c65 15%,#56a5e2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#632c65', endColorstr='#56a5e2',GradientType=1 );
 }
