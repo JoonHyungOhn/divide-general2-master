@@ -1,173 +1,226 @@
-/*GeneralRecommend*/
 body {
-    background-image: linear-gradient(90deg, #131230, #744F5E);
-    background-size: cover;
-}
-/*button*/
-.firstbtn{
-    padding:10px;
+    min-height: 100vh;
+    opacity: 1;
+    background: #e2a9e5;
+    background: -moz-linear-gradient(-45deg, #e2a9e5 15%, #2b94e5 100%);
+    background: -webkit-linear-gradient(-45deg, #e2a9e5 15%,#2b94e5 100%);
+    background: linear-gradient(135deg, #e2a9e5 15%,#2b94e5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2a9e5', endColorstr='#2b94e5',GradientType=1 );
+    text-align: center;
 }
 
+/*홈키 백키 버튼 구성*/
 .btnhome {
-    padding:10px;
     text-align: left;
     float: left;
+    margin-right: 10px;
 }
+.btnhome > .btn_home {
 
-#btn_home{
     
-    width:50px;
-    height:50px;
-}
-.btnbackspace {
-    padding:10px;
-    margin-left:15px;
-}
+    border-radius: 40px;
+    width: 80px;
+    height: 80px;
+    background-color: #eee; /*배경색*/
 
-#btn_back {
-    width:50px;
-    height:50px;
-}
-
-.squareui{
-    background-color: lightgray;
-    width: 80%;
-    height: 1000px;
-    border-radius: 30px;
-}
-
-
-.weathertxt {
-    margin-bottom:-40px;
-    color:lightslategray;
-    opacity: 50%;
-    font-size: 35px;
-    margin-left:100px;
-    font-weight: bolder;
-}
-
-.feeltxt {
-    float:left;
-    margin:-40px;
-    color:lightslategray;
-    opacity: 50%;
-    font-size: 35px;
-    margin-left:100px;
-    font-weight: bolder;
-}
-.mbtitxt{
-    float:left;
-    margin:-30px;
-    color:lightslategray;
-    opacity: 50%;
-    font-size: 40px;
-    margin-left:100px;
-    font-weight: bolder;
-}
-/**/
-.frame {
-    float:left;
-    width: 90%;
-    margin: 40px auto;
-    text-align: center;
-}
-button {
-    float:left;
-    left:  70px;
-    margin: 20px;
-}
-.custom-btn {
-    
-    width: 120px;
-    height: 50px;
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px 25px;
-    font-size: 20px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    background: transparent;
     cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
+    outline: none;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25); 
+    transition: background-color 0.3s ease;
+    /*글자 구성*/
+    font-weight: bolder;
+    font-size: 20px;
+    color: black;
+}
+.btn_home:hover {
+    background-color: #FFB6C1;
+}
+
+.btnbackspace{
+    text-align:left;
+}
+.btnbackspace > .btn_backspace {
+    border-radius: 40px;
+    width: 80px;
+    height: 80px;
+    background-color: #eee; /*배경색*/
+
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25); 
+    transition: background-color 0.3s ease;
+
+    /*글자 구성*/
+    font-weight: bolder;
+    font-size: 20px;
+    color: black;
+}
+.btn_backspace:hover {
+    background-color: #FFB6C1;
+}
+
+/*title*/
+.cocktail-title {
+    color:#eee;
+    font-size: 80px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.cocktail-title hr {
+    border: none;
+    height: 3px;
+    width: 80%;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+
+/* */
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    opacity: 0.7;
+    border-radius: 10px;
+    width:90%;
+    margin: 0 auto;
+  }
+  
+#display {
+    margin-top: 10px;
+    width: 950px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    background-color: #d3d3d3;
+}
+  
+.category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+  
+.category p {
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+}
+  
+button {
     display: inline-block;
-    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-    7px 7px 20px 0px rgba(0,0,0,.1),
-    4px 4px 5px 0px rgba(0,0,0,.1);
+    width: 100px;
+    height: 50px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #4d4d4d;
+    cursor: pointer;
+}
+  
+button:hover {
+    background-color: #666666;
+}
+  
+button:active {
+    background-color: #222222;
+}
+  
+button:focus {
     outline: none;
 }
-
-.btn-8 {
-    text-align: center;
-    background-color: #f0ecfc;
-    background-image: linear-gradient(315deg, #f0ecfc 0%, #c797eb 74%);
-    line-height: 42px;
-    padding: 0;
-    border: none;
+  
+@media screen and (max-width: 600px) {
+    #container {
+      grid-template-columns: 1fr;
+    }
 }
-  .btn-8 span {
+
+/*아래 버튼 연동*/
+#btn_rec {
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+
+    height: 15vh;
+}
+  
+.btn_general {
+    font-family: futura-pt, sans-serif;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    margin: 30px;  
     position: relative;
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  .btn-8:before,
-  .btn-8:after {
+    width: 240px;
+    height: 50px;
+    overflow: hidden;
+    border: none;
+    border-radius: 10px;
+    background-color: gray;/*배경색 변경가능*/
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+    outline: none;
+    cursor: pointer;
+    
+}
+.btn_general:hover {
+    box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, .2);
+}
+.btn_general::before {
+    opacity: 0;
     position: absolute;
-    content: "";
-    right: 0;
-    bottom: 0;
-    background: #c797eb;
-    /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-      inset -4px -4px 6px 0 rgba(255,255,255,.5),
-      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
-    transition: all 0.3s ease;
-  }
-  .btn-8:before{
-     height: 0%;
-     width: 2px;
-  }
-  .btn-8:after {
-    width: 0%;
-    height: 2px;
-  }
-  .btn-8:hover:before {
-    height: 100%;
-  }
-  .btn-8:hover:after {
-    width: 100%;
-  }
-  .btn-8:hover{
-    background: transparent;
-  }
-  .btn-8 span:hover{
-    color: #c797eb;
-  }
-  .btn-8 span:before,
-  .btn-8 span:after {
+    top: calc(100% * var(--ripple-y));
+    left: calc(100% * var(--ripple-x));
+    transform: translate(-50%, -50%) scale(1);
+    padding: 50%;
+    border-radius: 50%;
+    background-color: #fff;
+    content: '';
+    transition: transform 1s, opacity 1s;
+}
+.btn_general:active::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0s;
+}
+.btn_general::after {
+    opacity: 0;
     position: absolute;
-    content: "";
-    left: 0;
-    top: 0;
-    background: #c797eb;
-    /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-      inset -4px -4px 6px 0 rgba(255,255,255,.5),
-      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
-    transition: all 0.3s ease;
-  }
-  .btn-8 span:before {
-    width: 2px;
-    height: 0%;
-  }
-  .btn-8 span:after {
-    height: 2px;
-    width: 0%;
-  }
-  .btn-8 span:hover:before {
-    height: 100%;
-  }
-  .btn-8 span:hover:after {
-    width: 100%;
-  }  
+    top: calc(100% * var(--ripple-y));
+    left: calc(100% * var(--ripple-x));
+    transform: translate(-50%, -50%) scale(1);
+    padding: 50%;
+    border-radius: 50%;
+    background-color: #fff;
+    content: '';
+    transition: transform 2s, opacity 2s;
+}
+.btn_general:active::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0s;
+}
+@media screen and (max-width: 480px) {
+    h1 {
+      font-size: 1.75rem;
+    }
+}
